@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+    <!-- Home Section Start here -->
+    <section class="home" id="home">
+
+        <br><br><br>
+        <!-- <h3>Hi There !!!</h3> -->
+        <h1> Welcome !!! </h1>
+        
+        <h1>I'M 
+            {% for x in hi %}
+            <span>
+                {{ x.first_name }} {{ x.middle_name }} 
+            </span> <last>{{ x.last_name }}</last>
+        </h1>
+            <p>
+                {{ x.me|safe }}
+            </p>
+            {% endfor %}
+            
+        <center>
+            <a href="{% url 'b:about' %}">
+                <button class="btn" >
+                    about Me 
+                    <i class="fas fa-user"></i>
+                </button>
+            </a>
+        </center>
+
+        
+<br>
+<br>
+<br>
+<br>
+
+        
+    </section>
+
+    <!-- Home Section Ends here -->
+
+{% endblock content %}

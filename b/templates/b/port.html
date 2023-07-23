@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Portfolio Section Starts Here -->
+<section class="portfolio" id="portfolio">
+    <h1 class="heading"> My <span>Portfolio</span> </h1>
+    <div class="box-container">
+        
+        {% for d in abd %}
+        <div class="box">
+            <img src="{{ d.pic.url }}" alt="" >
+        </div>
+        {% endfor %}        
+    </div>
+</section>
+<!-- Portfolio Section Ends Here -->
+{% endblock content %}

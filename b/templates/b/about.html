@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- About Section Ends here -->
+<section class="about" id="about">
+    <h1 class="heading"><span>about</span> Me</h1>
+    <div class="row">
+        
+        <div class="info">           
+            <center>
+                <img src="{% static 'img/78.png' %}" class="fa-spin" alt="">  
+            </center>          
+            <h3><span>Name:</span> ADEOYE BLESSED omobuwa</h3>
+            <h3><span>Age:</span> 35+</h3>
+            <h3><span>Qualification:</span> B.sc in H.I.M </h3>
+            <h3><span>Designation:</span> Health Info. Manager </h3>
+            <h3><span>Designation:</span>  Python Programmer </h3>
+            <h3><span>Language:</span> English & Yoruba</h3>
+            <center>
+                {% for a in abt %}
+                <a href="{{a.cv.url}}">
+                    <button class="btn">
+                        Download CV 
+                        <i class="fas fa-download"></i>
+                    </button>
+                </a>
+                {% endfor %}
+            </center>
+        </div>
+
+        <div class="counter" id="refresh">
+            <div class="box">
+                <span class="num" data-val="11"></span>
+                <h3>Years of Experience</h3>
+            </div>
+            <div class="box">
+                <span class="num" data-val="109"></span>
+                <h3>Project Completed</h3>
+            </div>
+            <div class="box">
+                <span class="num" data-val="470"></span>
+                <h3>Happy Clients</h3>
+            </div>
+            <div class="box">
+                <span class="num" data-val="5"></span>
+                <h3>Award Won</h3>
+            </div>
+        </div>
+
+        <div class="social-heading">
+            {% for a in abt %}
+            <h1> My Social Media Handle </h1>
+        </div>
+        <div class="social">
+            <div class="sicon fb">
+                <a target="_blank" href="{{a.fb_URL}}">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Facebook</span>
+                </a>
+            </div>
+            <div class="sicon twt">
+                <a target="_blank" href="{{a.tw_URL}}">
+                    <i class="fab fa-twitter"></i>
+                    <span>Twitter</span>
+                </a>
+            </div>
+            <div class="sicon ins">
+                <a href="{{a.insta_URL}}" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+            </div>
+            <div class="sicon ink">
+                <a href="{{a.lk_URL}}" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+            <div class="sicon wht">
+                <a href="{{a.fb_URL}}"  target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>Whatsapp</span>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+<!-- About Section Ends here -->
+
+
+{% endblock content %}

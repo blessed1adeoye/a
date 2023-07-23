@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- Contact Section Starts Here -->
+<section class="contact" id="contact">
+    <h1 class="heading"><span>Contact</span> Me </h1>
+    <center>
+        {% if messages %}
+            {% for x in messages %}
+                <h2 style='color:gold'>{{x}}</h2>
+            {% endfor %}
+        {% endif %}                
+                   
+    </center>
+
+    <div class="row">
+        <div class="content">
+            <center>
+                <img src="{% static 'img/78.png' %}" class="fa-spin" alt="">  
+            </center>
+            <h3 class="title">Contact Info.</h3>
+            <div class="info">
+                <h3 email="newsexpertee@gmail.com"><i class="fas fa-envelope  fa-spin"></i>newsexpertee@gmail.com</h3>
+                <h3><i class="fas fa-phone  fa-pulse"></i>+234 813 298 6310</h3>
+                <h3><i class="fas fa-phone  fa-spin"></i>+234 902 895 8540</h3>
+                <h3><i class="fas fa-map-marker-alt"></i> Ibadan, Oyo Nigeria</h3>
+            </div>
+        </div>
+            <form action="{% url 'b:contact' %}" method="POST">
+                {% csrf_token %}
+                <input type="text" placeholder="NAME" id="name" class="box" name="name">
+                <input type="email" placeholder="EMAIL" id="email" class="box" name="email">
+                <input type="text" placeholder="SUBJECT" id="project" class="box" name="subject">
+                <textarea name="message" cols="30" rows="10" class="box message" placeholder="MESSAGE"></textarea>
+                <center>
+                    <button id="submitBtn"  type="submit" class="btn" > Send <i class="fas fa-paper-plane"></i></button>
+                </center>
+                    
+            </form>
+        <!-- </div> -->
+    </div>
+</section>
+<!-- Contact Section Ends Here -->
+
+{% endblock content %}
