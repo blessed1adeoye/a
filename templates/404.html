@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Page</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'fonts/css/all.css'%}">
+</head>
+
+<body>
+    <script>
+        window.oncontextmenu = function(){
+          alert('CONTACT OMOBUWA BLESSED ADEOYE')
+          return false;
+        }
+    </script>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background: #0a0b3b;
+            color: #fff;
+            font-family: sans-serif;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1{
+            font-size: 6em;
+            margin: 0;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse{
+            0%{
+                transform: scale(1);
+            }
+            50%{
+                transform: scale(1.2);
+            }
+
+            100%{
+                transform: scale(1);
+            }
+        }
+
+        p{
+            font-size: 1.5em;
+            margin: 0;
+            margin-top: 20px;
+        }
+
+        a{
+            display: inline-block;
+            padding: 10px 20px;
+            background: #4293ef;
+            color: #fff;
+            text-decoration: none;
+            margin-top: 20px;
+            font-size: 1.2em;
+            border-radius: 50px;
+            animation: bounce 1s ease-in-out infinite;
+        }
+
+        @keyframes bounce{
+            0%, 20%, 50%, 80%, 100%{
+                transform: translateY(0);
+            }
+            40%{
+                transform: translateY(-10px);
+            }
+
+            60%{
+                transform: translateY(-5px);
+            }
+        }
+        a:hover{
+            background-color: gold;
+            color: blue;
+        }
+
+        @media(max-width: 768px) {
+            h1{
+                font-size: 4em;
+            }
+        }
+
+    </style>
+    
+    
+    <div class="container">    
+        <img  src="{% static 'img/az.png' %}" width="150" height="50" alt="">
+        <h1>404</h1>
+        <p>Oops! Page Not Found</p>
+        <a href="{% url 'b:home' %}">go back to Homepage</a>
+    </div>
+    
+    
+</body>
+</html>

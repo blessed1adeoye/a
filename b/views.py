@@ -3,6 +3,11 @@ from .models import *
 from django.contrib import messages
 
 
+
+def error_404(request,exception):
+    return render(request, '404.html')
+
+
 def home(request):
     hi = HomE.objects.all()
     context = {
