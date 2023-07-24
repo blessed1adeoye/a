@@ -91,13 +91,28 @@
             h1{
                 font-size: 4em;
             }
+            p{
+                font-size: 1em;
+            }
+        }
+
+        @media(max-width: 576px) {
+            h1{
+                font-size: 3em;
+            }
+            p{
+                font-size: 0.8em;
+            }
+            a{
+                font-size: 1em;
+            }
         }
 
     </style>
     
     
     <div class="container">    
-        <img  src="{% static 'img/az.png' %}" width="150" height="50" alt="">
+        <img  src="{% static 'img/az.png' %}" width="300" alt="">
         <h1>404</h1>
         <p>Oops! Page Not Found</p>
         <a href="{% url 'b:home' %}">go back to Homepage</a>
