@@ -4,13 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>my portfolio</title>
-
-    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/1.ico' %}">
+    <title>Hire Me</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
     <link rel="stylesheet" href="{% static 'css/a.css'%}">
     <link rel="stylesheet" href="{% static 'fonts/css/all.css'%}">
-</head
+</head>
 
 <body>
     <script>
@@ -36,7 +34,7 @@
         </div>
         <nav class="navbar">
             <ul class="ade">
-                <li><a href="{% url 'b:home' %}" class="nav-link {% if ade == 'home' %} active {% endif %}">Home</a></li>
+                <li><a href="{% url 'b:home' %}" class="nav-link {% if nav == 'home' %} active {% endif %}">Home</a></li>
                 <li><a href="{% url 'b:about' %}">About</a></li>
                 <li><a href="{% url 'b:educate' %}">Education</a></li>
                 <li><a href="{% url 'b:port' %}">Portfolio</a></li>
@@ -49,20 +47,26 @@
 
 
 
-{% block content %}
+    {% block content %}
 
 
-{% endblock content %}
+    {% endblock content %}
 
 
 
-<!-- Scroll Top Button -->
+    <!-- Scroll Top Button -->
 
-<a href="#" class="top">
-    <h2 style="color: white;" class="fas fa-angle-double-up"></h2>
-</a>
+    <a href="#" class="top">
+        <h2 style="color: white;" class="fas fa-angle-double-up"></h2>
+    </a>
 
+<footer>
+        <center>
+            <p style="margin-right:45px; font-weight: 800; font-size: 18px; color: var(--yellow);  align-items: center; justify-content: center;">&copy; 2019 - <script>document.write(new Date().getFullYear());</script> &amp; Beyond - BLESSED ADEOYE.  All Rights Reserved.</p>
+        </center>
+</footer>
 
+</body>
     
 
 
@@ -70,6 +74,6 @@
 
     <script src="{% static 'js/jquery-3.2.1.min.js'%}"></script>
     <script src="{% static 'js/a.js'%}"></script>
-</body>
+
 
 </html>

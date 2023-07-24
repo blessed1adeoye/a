@@ -39,6 +39,7 @@ body{
     background: #111;
     overflow-x: hidden;
     padding-left: 35rem;
+    min-height: 100vh;
 }
 
 section{
@@ -530,8 +531,11 @@ header .navbar ul li a:hover{
 }
 
 
-
-
+footer{
+    background: #080cf6;
+    padding: 3rem;
+    margin-top: auto;
+}
 
 
 

@@ -16,6 +16,7 @@ class About(models.Model):
     tw_URL = models.URLField('TWITTER URL', blank=True, null=True)
     lk_URL = models.URLField('LINKEDIN URL', blank=True, null=True)
     insta_URL = models.URLField('INSTAGRAM URL', blank=True, null=True)
+    whatapp_url  = models.URLField('WHATSAPP URL', blank=True, null=True)
     
     
 
