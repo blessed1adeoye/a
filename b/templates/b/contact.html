@@ -28,10 +28,10 @@
         </div>
             <form action="{% url 'b:contact' %}" method="POST">
                 {% csrf_token %}
-                <input type="text" placeholder="NAME" id="name" class="box" name="name">
-                <input type="email" placeholder="EMAIL" id="email" class="box" name="email">
-                <input type="text" placeholder="SUBJECT" id="project" class="box" name="subject">
-                <textarea name="message" cols="30" rows="10" class="box message" placeholder="MESSAGE"></textarea>
+                <input type="text" placeholder="NAME" id="name" class="box" name="name" required >
+                <input type="email" placeholder="EMAIL" id="email" class="box" name="email" required>
+                <input type="text" placeholder="SUBJECT" id="project" class="box" name="subject" required>
+                <textarea name="message" cols="30" rows="10" class="box message" placeholder="MESSAGE" require></textarea>
                 <center>
                     <button id="submitBtn"  type="submit" class="btn" > Send <i class="fas fa-paper-plane"></i></button>
                 </center>
